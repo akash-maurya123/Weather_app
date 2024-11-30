@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f8ff; /* Light background for contrast */
+  }
+  
+  /* Main Weather Box */
+  .box {
+    position: relative; /* Establish positioning context for child elements */
+    background: linear-gradient(to top, #23dab8, #acb6e5);
+    padding: 20px 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    overflow: hidden; /* Prevent waves from flowing outside the box */
+  }
+  
+  /* Input Field */
+  .inputData {
+    margin-bottom: 20px;
+  }
+  
+  .inputFeild {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .inputFeild:focus {
+    box-shadow: 0 0 10px #23dab8;
+  }
+  
+  /* Error Message */
+  .errorMSG {
+    color: #ff6b6b;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  /* Weather Information */
+  .info {
+    color: #ffffff;
+  }
+  
+  .location {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .temp {
+    font-size: 48px;
+    margin: 10px 0;
+  }
+  
+  .tempmin_max {
+    font-size: 20px;
+  }
+  
+  /* Wave Animation */
+  .wave {
+    position: absolute; /* Position waves relative to the .box */
+    bottom: 0;
+    left: 0;
+    width: 150%; /* Ensure wave spans wider than the box for smooth animation */
+    height: 100px;
+    background: rgba(54, 192, 226, 0.3);
+    z-index: -1;
+    opacity: 0.5;
+    animation: wave-animation 10s infinite linear;
+  }
+  
+  .wave.-one {
+    animation-delay: 0s;
+  }
+  
+  .wave.-two {
+    animation-delay: -5s;
+    opacity: 0.3;
+  }
+  
+  .wave.-three {
+    animation-delay: -2.5s;
+    opacity: 0.2;
+  }
+  
+  /* Wave Animation Keyframes */
+  @keyframes wave-animation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
